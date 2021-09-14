@@ -65,6 +65,58 @@ public class MessageService {
             botState = handlerBotState.handlerBotStateStep05(replyMessage, messageText, chatId);
         }
 
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_06) {
+            botState = handlerBotState.handlerBotStateStep06(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_07) {
+            botState = handlerBotState.handlerBotStateStep07(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_08) {
+            botState = handlerBotState.handlerBotStateStep08(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_09) {
+            botState = handlerBotState.handlerBotStateStep09(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_10) {
+            botState = handlerBotState.handlerBotStateStep10(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_11) {
+            botState = handlerBotState.handlerBotStateStep11(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_12) {
+            botState = handlerBotState.handlerBotStateStep12(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_13) {
+            botState = handlerBotState.handlerBotStateStep13(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_14) {
+            botState = handlerBotState.handlerBotStateStep14(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_15) {
+            botState = handlerBotState.handlerBotStateStep15(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_16) {
+            botState = handlerBotState.handlerBotStateStep16(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_17) {
+            botState = handlerBotState.handlerBotStateStep17(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_18) {
+            botState = handlerBotState.handlerBotStateStep18(replyMessage, messageText, chatId);
+        }
+
         userDataCache.setUsersCurrentBotState(userId, botState);
         return replyMessage;
     }

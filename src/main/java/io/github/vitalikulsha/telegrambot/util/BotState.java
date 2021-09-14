@@ -11,5 +11,13 @@ public enum BotState {
     STEP_07,
     STEP_08,
     STEP_09,
-    STEP_10
+    STEP_10,
+    STEP_11,
+    STEP_12,
+    STEP_13,
+    STEP_14,
+    STEP_15,
+    STEP_16,
+    STEP_17,
+    STEP_18
 }
