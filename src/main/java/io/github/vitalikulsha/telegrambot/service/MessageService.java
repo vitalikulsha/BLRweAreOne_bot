@@ -57,6 +57,14 @@ public class MessageService {
             botState = handlerBotState.handlerBotStateStep03(replyMessage, messageText, chatId);
         }
 
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_04) {
+            botState = handlerBotState.handlerBotStateStep04(replyMessage, messageText, chatId);
+        }
+
+        if (userDataCache.getUsersCurrentBotState(userId) == BotState.STEP_05) {
+            botState = handlerBotState.handlerBotStateStep05(replyMessage, messageText, chatId);
+        }
+
         userDataCache.setUsersCurrentBotState(userId, botState);
         return replyMessage;
     }
