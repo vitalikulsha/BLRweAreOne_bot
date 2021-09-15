@@ -12,7 +12,6 @@ import java.util.*;
 public class HandlerBotState {
     private BotState botState;
     private Map<Long, Integer> userInfo = new HashMap<>();
-    //    private Set<Long> userInfo = new HashSet<>();
     @Autowired
     TelegramBot telegramBot;
 
@@ -58,9 +57,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep01(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_01;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER01BY.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else 
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER01BY.getCommand())) {
             botState = BotState.STEP_02;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step02.jpg");
@@ -78,9 +78,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep02(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_02;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER02BY.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else 
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER02BY.getCommand())) {
             botState = BotState.STEP_03;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step03.jpg");
@@ -98,9 +99,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep03(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_03;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER03BY.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else 
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER03BY.getCommand())) {
             botState = BotState.STEP_04;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step04.jpg");
@@ -123,9 +125,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep04(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_04;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER04BY.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER04BY.getCommand())) {
             botState = BotState.STEP_05;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step05.jpg");
@@ -143,9 +146,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep05(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_05;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER05BY0.getCommand()) ||
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else 
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER05BY0.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER05BY1.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER05BY2.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER05BY3.getCommand())) {
@@ -171,9 +175,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep06(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_06;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER06BY.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else 
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER06BY.getCommand())) {
             botState = BotState.STEP_07;
             replyMessage.setText(ConstReply.COMMENT0.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step07.jpg");
@@ -196,9 +201,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep07(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_07;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER07.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER07.getCommand())) {
             botState = BotState.STEP_08;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step08.jpg");
@@ -216,9 +222,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep08(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_08;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER08.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER08.getCommand())) {
             botState = BotState.STEP_09;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step09.jpg");
@@ -236,9 +243,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep09(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_09;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER09BY.getCommand()) ||
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER09BY.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER09RU.getCommand())) {
             botState = BotState.STEP_10;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
@@ -257,9 +265,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep10(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_10;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER10.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER10.getCommand())) {
             botState = BotState.STEP_11;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step11.jpg");
@@ -277,9 +286,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep11(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_11;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER11.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER11.getCommand())) {
             botState = BotState.STEP_12;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step12.jpg");
@@ -297,9 +307,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep12(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_12;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER12.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER12.getCommand())) {
             botState = BotState.STEP_13;
             replyMessage.setText(ConstReply.COMMENT1.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step13.jpg");
@@ -317,9 +328,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep13(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_13;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER13BY0.getCommand()) ||
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER13BY0.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER13BY1.getCommand())) {
             botState = BotState.STEP_14;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
@@ -343,9 +355,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep14(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_14;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER14BY0.getCommand()) ||
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER14BY0.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER14BY1.getCommand())) {
             botState = BotState.STEP_15;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
@@ -369,9 +382,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep15(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_15;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER15BY0.getCommand()) ||
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER15BY0.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER15BY1.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER15BY2.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER15BY3.getCommand()) ||
@@ -399,9 +413,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep16(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_16;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER16BY.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER16BY.getCommand())) {
             botState = BotState.STEP_17;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step17.jpg");
@@ -424,9 +439,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep17(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_17;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER17BY.getCommand())) {
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER17BY.getCommand())) {
             botState = BotState.STEP_18;
             replyMessage.setText(ConstReply.COMMENT.getCommand());
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step18.jpg");
@@ -449,9 +465,10 @@ public class HandlerBotState {
 
     public BotState handlerBotStateStep18(SendMessage replyMessage, String messageText, long chatId) {
         botState = BotState.STEP_18;
-        if (messageText.equals("/start")) {
-            answerToStart(replyMessage, chatId);
-        } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER18BY0.getCommand()) ||
+//        if (messageText.equals("/start")) {
+//            answerToStart(replyMessage, chatId);
+//        } else
+            if (messageText.equalsIgnoreCase(MutableReply.ANSWER18BY0.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER18BY1.getCommand())) {
             botState = BotState.INITIAL;
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\winner.gif");
