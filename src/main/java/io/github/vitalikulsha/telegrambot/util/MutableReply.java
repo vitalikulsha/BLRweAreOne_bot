@@ -35,7 +35,7 @@ public enum MutableReply {
     ANSWER15RU1("Могилёв"),
     ANSWER16BY("Мiнск"),
     ANSWER16RU("Минск"),
-    ANSWER17BY("Брэст>"),
+    ANSWER17BY("Брэст"),
     ANSWER17RU("Брест"),
     ANSWER18BY0("Шклоў"),
     ANSWER18BY1("Шклоу"),
