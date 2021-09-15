@@ -36,6 +36,12 @@ public class HandlerBotState {
             userInfo.put(chatId, 0);
         } else if (messageText.equals("/userinfo")) {
             replyMessage.setText("Колькасць карыстальнікаў " + userInfo.keySet().size());
+        } else if (messageText.equals("/userall")) {
+            StringBuilder userAllInfo = new StringBuilder("Колькасць карыстальнікаў " + userInfo.keySet().size() + "\n");
+            for (Map.Entry<Long, Integer> entry : userInfo.entrySet()) {
+                userAllInfo.append(entry.getKey() + " - " + entry.getValue() + "\n");
+            }
+            replyMessage.setText(userAllInfo.toString());
         } else if (messageText.equalsIgnoreCase(MenuCommand.START_QUEST.getCommand())) {
             botState = BotState.STEP_01;
             replyMessage.setText(ConstReply.START_QUEST.getCommand());
@@ -76,8 +82,8 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER02BY.getCommand())) {
             botState = BotState.STEP_03;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step03.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step03.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT02.getCommand());
@@ -96,13 +102,13 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER03BY.getCommand())) {
             botState = BotState.STEP_04;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step04.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step04.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER03RU.getCommand())) {
             botState = BotState.STEP_04;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step04.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step04.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 3);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT03.getCommand());
@@ -121,8 +127,8 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER04BY.getCommand())) {
             botState = BotState.STEP_05;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step05.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step05.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT04.getCommand());
@@ -144,13 +150,13 @@ public class HandlerBotState {
                 messageText.equalsIgnoreCase(MutableReply.ANSWER05BY2.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER05BY3.getCommand())) {
             botState = BotState.STEP_06;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step06.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step06.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER05RU.getCommand())) {
             botState = BotState.STEP_06;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step06.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step06.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 3);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT05.getCommand());
@@ -169,13 +175,13 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER06BY.getCommand())) {
             botState = BotState.STEP_07;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step07.jpg");
             replyMessage.setText(ConstReply.COMMENT0.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step07.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER06RU.getCommand())) {
             botState = BotState.STEP_07;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step07.jpg");
             replyMessage.setText(ConstReply.COMMENT0.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step07.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 3);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT06.getCommand());
@@ -194,8 +200,8 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER07.getCommand())) {
             botState = BotState.STEP_08;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step08.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step08.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT07.getCommand());
@@ -214,8 +220,8 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER08.getCommand())) {
             botState = BotState.STEP_09;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step09.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step09.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT08.getCommand());
@@ -235,8 +241,8 @@ public class HandlerBotState {
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER09BY.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER09RU.getCommand())) {
             botState = BotState.STEP_10;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step10.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step10.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT09.getCommand());
@@ -255,8 +261,8 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER10.getCommand())) {
             botState = BotState.STEP_11;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step11.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step11.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT10.getCommand());
@@ -275,8 +281,8 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER11.getCommand())) {
             botState = BotState.STEP_12;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step12.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step12.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT11.getCommand());
@@ -295,8 +301,8 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER12.getCommand())) {
             botState = BotState.STEP_13;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step13.jpg");
             replyMessage.setText(ConstReply.COMMENT1.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step13.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT12.getCommand());
@@ -316,13 +322,13 @@ public class HandlerBotState {
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER13BY0.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER13BY1.getCommand())) {
             botState = BotState.STEP_14;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step14.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step14.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER13RU.getCommand())) {
             botState = BotState.STEP_14;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step14.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step14.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 3);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT13.getCommand());
@@ -342,13 +348,13 @@ public class HandlerBotState {
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER14BY0.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER14BY1.getCommand())) {
             botState = BotState.STEP_15;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step15.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step15.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER14RU.getCommand())) {
             botState = BotState.STEP_15;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step15.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step15.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 3);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT14.getCommand());
@@ -371,14 +377,14 @@ public class HandlerBotState {
                 messageText.equalsIgnoreCase(MutableReply.ANSWER15BY3.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER15BY4.getCommand())) {
             botState = BotState.STEP_16;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step16.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step16.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER15RU0.getCommand()) ||
                 messageText.equalsIgnoreCase(MutableReply.ANSWER15RU1.getCommand())) {
             botState = BotState.STEP_16;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step16.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step16.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 3);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT15.getCommand());
@@ -397,13 +403,13 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER16BY.getCommand())) {
             botState = BotState.STEP_17;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step17.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step17.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER16RU.getCommand())) {
             botState = BotState.STEP_17;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step17.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step17.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 3);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT16.getCommand());
@@ -422,13 +428,13 @@ public class HandlerBotState {
             answerToStart(replyMessage, chatId);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER17BY.getCommand())) {
             botState = BotState.STEP_18;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step18.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step18.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER17RU.getCommand())) {
             botState = BotState.STEP_18;
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step18.jpg");
             replyMessage.setText(ConstReply.COMMENT.getCommand());
+            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step18.jpg");
             userInfo.put(chatId, userInfo.get(chatId) + 3);
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT17.getCommand());
@@ -450,14 +456,12 @@ public class HandlerBotState {
             botState = BotState.INITIAL;
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\winner.gif");
             userInfo.put(chatId, userInfo.get(chatId) + 5);
-            replyMessage.setText("Правiна, твой вынiк - " + userInfo.get(chatId));
-            replyMessage.setText(ConstReply.COMMENT_WIN.getCommand());
+            replyMessage.setText(ConstReply.COMMENT_WIN.getCommand() + userInfo.get(chatId));
         } else if (messageText.equalsIgnoreCase(MutableReply.ANSWER18RU.getCommand())) {
             botState = BotState.INITIAL;
             telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\winner.gif");
             userInfo.put(chatId, userInfo.get(chatId) + 3);
-            replyMessage.setText("Правiна, твой вынiк - " + userInfo.get(chatId));
-            replyMessage.setText(ConstReply.COMMENT_WIN.getCommand());
+            replyMessage.setText(ConstReply.COMMENT_WIN.getCommand() + userInfo.get(chatId));
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
             replyMessage.setText(MutableHint.HINT18.getCommand());
             userInfo.put(chatId, userInfo.get(chatId) - 1);
