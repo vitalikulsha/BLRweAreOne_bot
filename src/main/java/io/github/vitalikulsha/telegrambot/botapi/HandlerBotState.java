@@ -44,7 +44,7 @@ public class HandlerBotState {
         } else if (messageText.equalsIgnoreCase(MenuCommand.START_QUEST.getCommand())) {
             botState = BotState.STEP_01;
             replyMessage.setText(ConstReply.START_QUEST.getCommand());
-            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step01.jpg");
+//            telegramBot.sendPhoto(chatId, "", "src\\main\\resources\\img\\step01.jpg");
         } else if (messageText.equals(MenuCommand.HELP.getCommand())) {
             replyMessage.setText(ConstReply.HELP.getCommand());
         } else if (messageText.equals(MenuCommand.HINT.getCommand())) {
