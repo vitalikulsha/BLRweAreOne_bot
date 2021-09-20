@@ -472,6 +472,8 @@ public class HandlerBotState {
         return botState;
     }
 
+
+
     private void answerToStart(SendMessage replyMessage, long chatId) {
         replyMessage.setText(ConstReply.RESTART.getCommand());
         botState = BotState.INITIAL;
